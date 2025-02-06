@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container with full viewport height -->
+    <div class="min-h-screen">
+
+        <!-- Game container with white background and shadow -->
+        <div class="game-container">
+            <h1>Color Guessing Game</h1>
+
+            <!-- Game information section -->
+            <div class="game-info">
+                <p data-testid="gameInstructions">
+                    Can you guess the correct color? Click on the matching color below!
+                </p>
+                <p class="score-text">
+                    Score: <span data-testid="score" id="score">0</span>
+                </p>
+            </div>
+
+            <!-- Main color display box that players need to match -->
+            <div data-testid="colorBox" id="colorBox" class="color-box"></div>
+
+            <!-- Game status message (correct/wrong) -->
+            <p data-testid="gameStatus" id="gameStatus" class="game-status"></p>
+
+            <!-- Grid container for color options -->
+            <div class="color-grid" id="colorGrid"></div>
+
+            <!-- Grid container for color options -->
+            <button data-testid="newGameButton" id="newGameButton" class="new-game-button">
+                New Game
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Reset default margin and set base font */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: grey;
+}
+
+/* Main container styles */
+.min-h-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Game container styles */
+.game-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Game title styles */
+h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+/* Game information section styles */
+.game-info {
+    margin-bottom: 2rem;
+}
+
+/* Game instruction text styles */
+.game-info p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+/* Score display styles */
+.score-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #374151;
+}
+
+/* Main color display box styles */
+.color-box {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+/* Hover effect for color box */
+.color-box:hover {
+    transform: scale(1.05);
+}
+
+/* Game status message styles */
+.game-status {
+    min-height: 24px;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+/* Correct answer status styles */
+.correct {
+    color: #22c55e;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Wrong answer status styles */
+.wrong {
+    color: #ef4444;
+    animation: shake 0.5s ease;
+}
+
+/* Color options grid styles */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 28rem;
+    margin: 0 auto 2rem;
+}
+
+/* Individual color option button styles */
+.color-option {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+/* Hover effect for color options */
+.color-option:hover {
+    transform: scale(1.05);
+}
+
+/* New game button styles */
+.new-game-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+/* Hover effect for new game button */
+.new-game-button:hover {
+    background-color: #2563eb;
+}
+/* Focus state for new game button */
+.new-game-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
